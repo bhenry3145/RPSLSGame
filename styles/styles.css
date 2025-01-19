@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Irish Grover;
+    src: url('../fonts/IrishGrover-Regular.ttf');
+}
+
+@font-face {
+    font-family: Jersey;
+    src: url('../fonts/Jersey10-Regular.ttf');
+}
+
+/* Home Page */
+
+body {
+    background-color: #5EC6DD;
+    font-family: Jersey;
+}
+
+body h1 {
+    font-family: Irish Grover !important;
+}
+
+
+.hide {
+    display: none !important;
+}
+
+.header {
+    background-color: #BF3E3E;
+    font-family:'Courier New', Courier, monospace;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    font-size: 64px;
+}
+
+.header h1 {
+    margin: 1rem;
+    font-size: 64px;
+}
+
+.header h3 {
+    margin: 1rem;
+    font-size: 36px;
+}
+
+.pictures {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.finalPictures {
+    width: 75%;
+    height: fit-content;
+}
+
+.pictures img {
+    width: 100%;
+    height: 100%;
+}
+
+.buttons {
+    margin-top: 8rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons button {
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 0%;
+    font-size: 64px;
+}
+
+/* Game Mode Selector Page */
+
+
+/* Rules Page */
+
+.rules-header {
+    background-color: #BF3E3E;
+    font-family:'Courier New', Courier, monospace;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 4rem 0;
+}
+
+.rules-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+}
+
+.rules-buttons button {
+    border-radius: 0%;
+    font-size: 64px;
+    margin: 8rem 0 0 12rem;
+    width: 16rem;
+    height: 8rem;
+}
+
+.rules-buttons img {
+    height: 100%;
+    width: 75%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.picard {
+    position: relative;
+    text-align: center;
+}
+
+.picard img {
+    height: 100%;
+    width: 100%;
+}
+
+.picard h3 {
+    position: absolute;
+    bottom: 50px;
+    color: white;
+    left: 200px;
+}
+
+
+
+/* Selector Page CPU*/
+
+.selection {
+    display: flex;
+    justify-content: center;
+    margin: 8rem;
+    text-align: center;
+}
+
+.selection h1 {
+    font-size: 64px;
+}
+
+/* Selector Page Human */
+
+.selector-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.selection-pictures-left img {
+    height: 11rem;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.selection-pictures-right img {
+    height: 11rem;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.selection-human {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    text-align: center;
+}
+
+.selection-human h1 {
+    font-size: 48px;
+}
+
+/* Results */
+
+.resultsDesign {
+    display: flex;
+    justify-content: space-around;
+    margin: 8rem 0 0 16rem;
+}
+
+.resultsDisplay {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 4rem;
+}
+
+/* Local Section */
+
+.localGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.resultsDisplayMulti {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4rem;
+}
+
+.picturesLocal {
+    display: flex;
+    flex-direction: column;
+    width: 12rem;
+    height: 8rem;
+}
+
+.picturesLocal2 {
+    display: flex;
+    align-content: end;
+    flex-direction: column;
+    width: 12rem;
+    height: 8rem;
+    grid-column: 4;
+}
+
+.resultsDisplay2 {
+    grid-column: 2 / 4;
+}
