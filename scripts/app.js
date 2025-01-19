@@ -22,7 +22,6 @@ let roundBtnsSingle = document.getElementById('roundBtnsSingle');
 let advice = document.getElementById('advice');
 let gamestageCPU = false;
 let gamestageCPU5 = false;
-let gamestageCPU7 = false;
 let gamestageLocal = false;
 let gamestageLocal5 = false;
 let player1Turn = false;
@@ -56,6 +55,9 @@ let spockp2 = document.getElementById('spockp2');
 let resultsMultiDisplay = document.getElementById('resultsMultiDisplay');
 let resultsMultiDisplay2 = document.getElementById('resultsMultiDisplay2');
 let advice2 = document.getElementById('advice2');
+let resultsMultiSingle = document.getElementById('resultsMultiSingle');
+let userPic = document.getElementById('userPic');
+let computerPic = document.getElementById('computerPic');
 
 
 rulesBtn.addEventListener('click', () => {
@@ -149,9 +151,7 @@ threeWinBtnSingle.addEventListener('click', () => {
     gamestageCPU5 = true;
     victory = 3;
     maxRounds = 5;
-    playerScoreDisplay.classList.toggle('hide');
-    cpuScoreDisplay.classList.toggle('hide');
-    currentRoundDisplay.classList.toggle('hide');
+    resultsMultiSingle.classList.toggle('hide');
 })
 
 fourWinBtnSingle.addEventListener('click', () => {
@@ -162,9 +162,7 @@ fourWinBtnSingle.addEventListener('click', () => {
     gamestageCPU5 = true;
     victory = 4;
     maxRounds = 7;
-    playerScoreDisplay.classList.toggle('hide');
-    cpuScoreDisplay.classList.toggle('hide');
-    currentRoundDisplay.classList.toggle('hide');
+    resultsMultiSingle.classList.toggle('hide');
 })
 
 
@@ -199,33 +197,33 @@ async function SingleGame(userPick) {
         if (computerData == "Lizard" || computerData == "Scissors")
         {
             homeHeader.innerText = "YOU WIN!!!!";
-            yourPic.src = "./assets/rock.jpg"
+            userPic.src = "./assets/rock.jpg"
             if (computerData == "Lizard")
             {
-                cpuPic.src = "./assets/lizard.jpg"
+                computerPic.src = "./assets/lizard.jpg"
             }
             else if (computerData == "Scissors")
             {
-                cpuPic.src = "./assets/scissors.jpg"
+                computerPic.src = "./assets/scissors.jpg"
             }
         }
         else if (computerData == "Rock")
         {
             homeHeader.innerText = "You tied";
-            yourPic.src = "./assets/rock.jpg";
-            cpuPic.src = "./assets/rock.jpg"
+            userPic.src = "./assets/rock.jpg";
+            computerPic.src = "./assets/rock.jpg"
         }
         else
         {
             homeHeader.innerText = "You lose";
-            yourPic.src = "./assets/rock.jpg"
+            userPic.src = "./assets/rock.jpg"
             if (computerData == "Spock")
             {
-                cpuPic.src = "./assets/spock.jpg"
+                computerPic.src = "./assets/spock.jpg"
             }
             else if (computerData == "Paper")
             {
-                cpuPic.src = "./assets/paper.jpg"
+                computerPic.src = "./assets/paper.jpg"
             }
         }
 
@@ -241,33 +239,33 @@ async function SingleGame(userPick) {
         if (computerData == "Rock" || computerData == "Spock")
         {
             homeHeader.innerText = "YOU WIN!!!!";
-            yourPic.src = "./assets/paper.jpg"
+            userPic.src = "./assets/paper.jpg"
             if (computerData == "Rock")
             {
-                cpuPic.src = "./assets/rock.jpg"
+                computerPic.src = "./assets/rock.jpg"
             }
             else if (computerData == "Spock")
             {
-                cpuPic.src = "./assets/spock.jpg"
+                computerPic.src = "./assets/spock.jpg"
             }
         }
         else if (computerData == "Paper")
         {
             homeHeader.innerText = "You tied";
-            yourPic.src = "./assets/paper.jpg"
-            cpuPic.src = "./assets/paper.jpg"
+            userPic.src = "./assets/paper.jpg"
+            computerPic.src = "./assets/paper.jpg"
         }
         else
         {
             homeHeader.innerText = "You lose";
-            yourPic.src = "./assets/paper.jpg"
+            userPic.src = "./assets/paper.jpg"
             if (computerData == "Scissors")
             {
-                cpuPic.src = "./assets/scissors.jpg"
+                computerPic.src = "./assets/scissors.jpg"
             }
             else if (computerData == "Lizard")
             {
-                cpuPic.src = "./assets/lizard.jpg"
+                computerPic.src = "./assets/lizard.jpg"
             }
         }
     }
@@ -282,22 +280,22 @@ async function SingleGame(userPick) {
             if (computerData == "Paper" || computerData == "Lizard")
             {
                 homeHeader.innerText = "YOU WIN!!!!";
-                yourPic.src = "./assets/scissors.jpg";
+                userPic.src = "./assets/scissors.jpg";
                 results.classList.toggle('finalPictures');
                 if (computerData == "Lizard")
                 {
-                    cpuPic.src = "./assets/lizard.jpg"
+                    computerPic.src = "./assets/lizard.jpg"
                 }
                 else if (computerData == "Paper")
                 {
-                    cpuPic.src = "./assets/paper.jpg"
+                    computerPic.src = "./assets/paper.jpg"
                 }
             }
             else if (computerData == "Scissors")
             {
                 homeHeader.innerText = "You tied";
-                yourPic.src = "./assets/scissors.jpg"
-                cpuPic.src = "./assets/scissors.jpg"
+                userPic.src = "./assets/scissors.jpg"
+                computerPic.src = "./assets/scissors.jpg"
             }
             else
             {
@@ -315,22 +313,22 @@ async function SingleGame(userPick) {
         if (computerData == "Paper" || computerData == "Spock")
         {
             homeHeader.innerText = "YOU WIN!!!!";
-            yourPic.src = "./assets/lizard.jpg"
+            userPic.src = "./assets/lizard.jpg"
             results.classList.toggle('finalPictures');
             if (computerData == "Paper")
             {
-                cpuPic.src = "./assets/paper.jpg"
+                computerPic.src = "./assets/paper.jpg"
             }
             else if (computerData == "Spock")
             {
-                cpuPic.src = "./assets/spock.jpg"
+                computerPic.src = "./assets/spock.jpg"
             }
         }
         else if (computerData == "Lizard")
         {
             homeHeader.innerText = "You tied";
-            yourPic.src = "./assets/lizard.jpg"
-            cpuPic.src = "./assets/lizard.jpg"
+            userPic.src = "./assets/lizard.jpg"
+            computerPic.src = "./assets/lizard.jpg"
         }
         else
         {
@@ -348,22 +346,22 @@ async function SingleGame(userPick) {
             if (computerData == "Rock" || computerData == "Scissors")
             {
                 homeHeader.innerText = "YOU WIN!!!!";
-                yourPic.src = "./assets/spock.jpg"
+                userPic.src = "./assets/spock.jpg"
                 // results.classList.toggle('finalPictures');
             if (computerData == "Rock")
             {
-                cpuPic.src = "./assets/rock.jpg"
+                computerPic.src = "./assets/rock.jpg"
             }
             else if (computerData == "Scissors")
             {
-                cpuPic.src = "./assets/scissors.jpg"
+                computerPic.src = "./assets/scissors.jpg"
             }
             }
             else if (computerData == "Spock")
             {
                 homeHeader.innerText = "You tied";
-                yourPic.src = "./assets/spock.jpg"
-                cpuPic.src = "./assets/spock.jpg"
+                userPic.src = "./assets/spock.jpg"
+                computerPic.src = "./assets/spock.jpg"
             }
             else
             {
@@ -509,13 +507,13 @@ async function ThreeWin(userPick) {
         if (playerScore == victory)
         {
             homeHeader.innerText = "You win!!!!";
-            refreshBtn2.classList.toggle('hide');
+            resultsMultiDisplay2.classList.toggle('hide');
             return;
         }
         else if (cpuScore == victory)
         {
             homeHeader.innerText = "You lose!!!!";
-            refreshBtn2.classList.toggle('hide');
+            resultsMultiDisplay2.classList.toggle('hide');
             return;
         }
 
@@ -528,17 +526,17 @@ async function ThreeWin(userPick) {
             if (playerScore > cpuScore)
             {
                 homeHeader.innerText = "You win!";
-                refreshBtn2.classList.toggle('hide');
+                resultsMultiDisplay2.classList.toggle('hide');
             }
             else if (cpuScore > playerScore)
             {
                 homeHeader.innerText = "You lose :(";
-                refreshBtn2.classList.toggle('hide');
+                resultsMultiDisplay2.classList.toggle('hide');
             }
             else 
             {
                 homeHeader.innerText = "Oh it's a draw :/";
-                refreshBtn2.classList.toggle('hide');
+                resultsMultiDisplay2.classList.toggle('hide');
             }
         }
 }
